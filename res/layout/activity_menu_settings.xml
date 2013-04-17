@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0sp"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".MenuSettings" >
+    <TextView
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="3dip"
+        android:paddingLeft="5dip"
+        android:textSize="20sp"
+        android:textColor="@color/text_color"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="1"
+       	android:shadowDy="1"
+        android:shadowRadius="1"
+        android:text="@string/settings" />  
+    <View
+    	android:id="@+id/line"
+    	android:layout_below="@id/current"
+    	android:layout_width="fill_parent"	
+    	android:paddingTop="3dip"
+    	android:paddingBottom="3dip"
+    	android:layout_height="2dip"
+    	android:background="#ffffff" /> 
+    <TextView
+        android:id="@+id/metricUnits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="3dip"
+        android:paddingLeft="10dip"
+        android:paddingTop="50dip"
+        android:textSize="20sp"
+        android:textColor="@color/text_color"
+        android:shadowColor="@color/text_shadow"
+        android:shadowDx="1"
+       	android:shadowDy="1"
+        android:shadowRadius="1"
+        android:text="@string/metricUnits" />  
+    <RadioGroup
+    	android:id="@+id/degree"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:paddingLeft="5dip"
+    	android:orientation="horizontal">
+    	<RadioButton android:id="@+id/radio_C"
+        	android:layout_width="120dip"
+        	android:layout_height="wrap_content"
+        	android:text="@string/celcius"
+        	android:textColor="@color/text_color"
+        	android:onClick="onRadioButtonClickedDegree"/>
+    	<RadioButton android:id="@+id/radio_F"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/fahrenheit"
+        	android:textColor="@color/text_color"
+        	android:onClick="onRadioButtonClickedDegree"/>
+    </RadioGroup>
+    <RadioGroup
+    	android:id="@+id/speed"
+		android:paddingLeft="5dip"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal">
+    	<RadioButton android:id="@+id/radio_KMH"
+        	android:layout_width="120dip"
+        	android:layout_height="wrap_content"
+        	android:text="@string/kmh"
+        	android:textColor="@color/text_color"
+        	android:onClick="onRadioButtonClickedSpeed"/>
+    	<RadioButton android:id="@+id/radio_MPH"
+        	android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:text="@string/mph"
+        	android:textColor="@color/text_color"
+        	android:onClick="onRadioButtonClickedSpeed"/>    	
+	</RadioGroup>
+</LinearLayout>
